@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to RealmRetreat</title>
+    <!-- Add your CSS and external libraries here -->
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/groups">Groups</a></li>
+            <li><a href="/forums">Forums</a></li>
+            <li><a href="/chat">Chat</a></li>
+            <li><a href="/profile">My Profile</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Welcome to RealmRetreat</h1>
+        <p>Your portal to fantasy, anime, and MMORPG realms.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Recent Posts</h2>
+            <ul>
+                <% recentPosts.forEach(function(post) { %>
+                    <li>
+                        <strong><%= post.username %>:</strong>
+                        <%= post.content %>
+                    </li>
+                <% }); %>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <%= new Date().getFullYear() %> RealmRetreat</p>
+    </footer>
+</body>
+</html>
